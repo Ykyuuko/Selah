@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:900&display=swap');
+body {
+	margin: 0px;
+}
+
+#container {
+	/* Center the text in the viewport. */
+	position: absolute;
+	margin: auto;
+	width: 100vw;
+	height: 10pt;
+	top: 0;
+	bottom: 0;
+  
+	filter: url(#threshold) blur(0.6px);
+}
+
+/* Your average text styling */
+#text1, #text2 {
+	position: absolute;
+	width: 100%;
+	display: inline-block;
+	
+	font-family: 'Raleway', sans-serif;
+	font-size: 80pt;
+	
+	text-align: center;
+	
+	user-select: none;
+}
+
+
+
+body {
+	background: var(--background);
+	color: var(--foreground);
+	min-height: 100dvh;
+	display: grid;
+	place-content: center;
+	margin: 0;
+	font-family: "Serif";
+}
+
+button {
+	--border-angle-1: 0deg;
+	--border-angle-2: 90deg;
+	--border-angle-3: 180deg;
+	color: inherit;
+	font-size: calc(20rem + 4vmin);
+	font-family: inherit;
+	border: 0;
+	padding: var(--border-size);
+	display: flex;
+	width: max-content;
+	border-radius: var(--border-radius);
+	background-color: transparent;
+	background-image: conic-gradient(
+			from var(--border-angle-1) at 10% 15%,
+			transparent,
+			var(--bright-blue) 10%,
+			transparent 30%,
+			transparent
+		),
+		conic-gradient(
+			from var(--border-angle-2) at 70% 60%,
+			transparent,
+			var(--bright-green) 1%,
+			transparent 60%,
+			transparent
+		),
+		conic-gradient(
+			from var(--border-angle-3) at 50% 20%,
+			transparent,
+			var(--bright-red) 10%,
+			transparent 50%,
+			transparent
+		);
+	animation: 
+		rotateBackground 3s linear infinite,
+		rotateBackground2 8s linear infinite,
+		rotateBackground3 13s linear infinite;
+}
+
+/* Change this background to transparent to see how the gradient works */
+button div {
+	background: transparent; 
+	padding: 1em 1.5em;
+	border-radius: calc(var(--border-radius) - var(--border-size));
+	color: var(--foreground);
+}
+
+@font-face {
+	font-family: "serif";
+	font-weight: normal;
+	src: urlhttps://files.gumroad.com/attachments/8104279737332/440aa80f9b83400b9b3aae68579bcd52/original/Butler_FREE_VERSION.zip?response-content-disposition=attachment&cache_key=bdc2&verify=1717794919-%2FXmJliP%2FQJs0MBpfV490H53%2F05Ouu8PX4uxAP5Xo6lk%3Dformat("woff2");
+}
+body {
+	background: linear-gradient(-45deg, #9971ff, #8fd78f, #d70054, #84b58b);
+	background-size: 400% 400%;
+	animation: gradient 10s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
